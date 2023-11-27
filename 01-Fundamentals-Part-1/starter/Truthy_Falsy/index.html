@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<!-- Truthy and falsy values -->
+    <script>
+        // there are only 5 falsy values 
+        //  all other values are only truthy values
+
+        //falsy
+        console.log(Boolean(0))  
+        console.log(Boolean(''));
+        console.log(Boolean(undefined));
+        console.log(Boolean(null));
+        console.log(Boolean(NaN));
+
+        // truthy 
+        console.log(Boolean({}));
+        console.log(Boolean('Jonas')); 
+
+
+        const money = 0
+        if (money){
+            console.log("Dont spent it all.")
+        }else{
+            console.log('You should get a job !');
+        }
+
+
+        let height;
+        if (height) {
+            console.log('Height is defined ');
+        } else{
+            console.log('Height is not defined');
+            
+        }
+            
+        // prompt("enter a number")
+        
+
+        console.log('NOT EQUAL TO : ');
+        console.log(23 != '23'); // false : as loosely they are equal 
+        console.log(23 !== '23'); // true : as strictly they are not equal
+        
+        
+        
+        
+        
+        
+
+
+
+    </script>
+</body>
+</html>
