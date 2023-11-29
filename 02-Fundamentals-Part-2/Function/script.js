@@ -58,3 +58,32 @@ const find_avg = (num1, num2 ) => {
 const avg_of_5_10 = find_avg(5,10)
 console.log(avg_of_5_10);
 
+
+// ============================================ CALLING A FUNCTION INSIDE A FUNCTION : DATA FLOW   =============================================
+const raise_to_power_5 = function(num){
+    return num ** 5;
+}
+
+const sum_of_nums_raised_topower_5 = function(num1, num2){
+    const firstNumPower5 = raise_to_power_5(num1)
+    const secondNumPower5 = raise_to_power_5(num2)
+
+    return firstNumPower5 + secondNumPower5;
+}
+
+console.log(sum_of_nums_raised_topower_5(2,3));
+
+
+// ex2 
+const square_num = function(num){
+    return num*num
+}
+
+const avg_of_squares = function(num1, num2){
+    const num1_squares = square_num(num1)
+    const num2_squares = square_num(num2)
+
+    return (num1_squares+num2_squares)/2
+}
+
+console.log(avg_of_squares(2, 3));
