@@ -34,7 +34,7 @@ const anjali = {
     city : 'Amritsar',
     country : 'India',
     friends : ['Rakhi', 'Sashi', 'Rikki', 'Preeti'],
-    hasDriverLicense : true,
+    hasDriverLicense : false,
     // ages: 2025 - this.birthYear, // this is not valid as this keyword cant be used before 
 
     findAge : function(){return 2023 - this.birthYear},
@@ -47,7 +47,11 @@ const anjali = {
 
         return this.age ; 
         // now age will be calculated for the first time this function is called and this value will be stored in the object with property name age. next time we call the same function , then age will not be calculated as it has already been calculated.
-    }    
+    },
+    
+    getSummary : function(){
+        return `${this.firstName} is a ${this.findAgee()} years old person , who lives in ${this.city} and she ${(this.hasDriverLicense)? 'has a':'does not have any '} driverLicense. `;
+    }
 }
 
 console.log('This is test');
@@ -65,3 +69,25 @@ console.log(anjali.ages);
 
 // To know more about use of this read this chatGpt querry
 // https://chat.openai.com/share/685d16cf-feae-40dc-9d88-cf67fd365012
+
+
+// ================================ CHALLENGE ======================================
+// print the sentence : `Anjali is a 23 years old person , who lives in cityname and she has/does'nt have a driver license
+
+// console.log(`${anjali.firstName} is a ${anjali.findAgee()} years old person , who lives in ${anjali.city} and she ${(anjali.hasDriverLicense)? 'has a':'does not have any '} driverLicense. `); 
+
+ // we can also do this by defining the function getSummary() inside the object
+
+
+console.log(anjali.getSummary());
+
+
+
+
+
+
+
+
+
+
+
